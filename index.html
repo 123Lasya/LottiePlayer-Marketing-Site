@@ -9,73 +9,47 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-      rel="stylesheet"
-    />
 
-    <!-- custom styles -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
 
     <title>LottiePlayer Marketing Site</title>
+
+    <!-- Bootstrap JS -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     ></script>
   </head>
 
-  <body class="m-0 border-0 bd-example m-0 border-0">
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
         <a class="navbar-brand" href="#">Logo</a>
 
-        <!-- mobile menu button -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-target="#navMenu"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Features</a
-              >
+              <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Use Cases</a>
+              <a class="nav-link" href="#usecases">Use Cases</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Privacy</a>
-            </li>
-
-            <!-- CTA for mobile view -->
-            <li class="nav-item d-lg-none mt-2">
-              <a class="btn btn-cta mobile-cta" href="#">Start Free Trial</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
           </ul>
-        </div>
-
-        <!-- CTA for desktop view -->
-        <div class="d-flex ms-auto align-items-center">
-          <a class="btn btn-cta d-none d-lg-inline-block" href="#">
-            Start Free Trial
-          </a>
+          <a class="btn btn-cta" href="#">Start Free Trial</a>
         </div>
       </div>
     </nav>
@@ -85,102 +59,70 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 hero-text">
-            <div class="badge mb-3">Compatible with Online Store 2.0</div>
-
-            <h1 class="display-5 fw-bold">
-              Turn Static Pages into Dynamic Experiences
-            </h1>
-
-            <p class="lead mb-4">
+            <span class="badge">Compatible with Online Store 2.0</span>
+            <h1>Turn Static Pages into Dynamic Experiences</h1>
+            <p>
               The easiest way to add high-performance Lottie animations to your
               Shopify store. Drag-and-drop simplicity with powerful controls.
             </p>
-            <div class="d-flex gap-2 mb-2">
-              <a
-                class="btn btn-outline-secondary btn-dark text-light btn-lg"
-                href="#"
+
+            <div class="hero-buttons">
+              <a class="btn btn-dark btn-lg btn-1" href="#"
                 >Start Your Free Trial</a
               >
-              <a class="btn btn-outline-secondary text-dark btn-lg" href="#"
+              <a class="btn btn-outline-dark btn-lg" href="#"
                 >See How it Works</a
               >
             </div>
-            <small class="text-muted">
-              <span class="p-5"></span> 7-day free trial
-              <span class="p-3"></span> • No coding required
-            </small>
+
+            <small>
+              <span class="p-5"></span>7-day free trial
+              <span class="p-1"></span>• No coding required</small
+            >
           </div>
 
-          <!-- lottie animation -->
           <div class="col-lg-6 text-center">
-            <!-- dotLottie web component -->
-            <dotlottie-wc
-              src="https://lottie.host/25486076-8748-47df-a93b-47a7bfe7660a/Ymsodq9dzS.lottie"
-              style="width: 500px; height: 400px"
-              autoplay
-              loop
-            ></dotlottie-wc>
+            <dotlottie-wc autoplay loop></dotlottie-wc>
           </div>
         </div>
       </div>
     </section>
-    <!-- Feature Grid Section -->
-    <section class="feature-grid-section py-5">
-      <div class="container">
+
+    <!-- Feature Grid -->
+    <section id="features" class="py-5 border-1">
+      <div class="container-fluid px-5">
         <div class="feature-grid">
-          <!-- Performance First (Wide) -->
-          <div class="feature-card feature-wide feature-horizontal">
-            <div class="feature-icon">
-              <!-- lottie1 -->
-              ⚡
-            </div>
-            <div class="feature-content">
-              <h3 class="feature-title">Performance First</h3>
-              <p class="feature-text">
-                Heavy GIFs kill your conversion rates. Our player uses
-                lightweight .json and .lottie files with smart lazy-loading,
-                ensuring your site speed scores remain high (90+ Google
-                Lighthouse).
-              </p>
-            </div>
+          <div class="feature-card feature-large">
+            <span>⚡</span>
+            <h3>Performance First</h3>
+            <p>
+              Heavy GIFs kill your conversion rates. Our player uses lightweight
+              .json and .lottie files with smart lazy-loading, ensuring your
+              site speed scores remain high (90+ Google Lighthouse).
+            </p>
           </div>
 
-          <!-- Mobile Control (Small) -->
-          <div class="feature-card feature-vertical">
-            <div class="feature-icon">
-              <!-- lottie3 -->
-              📱
-            </div>
-            <h3 class="feature-title">Mobile Control</h3>
-            <p class="feature-text">
+          <div class="feature-card">
+            <span>🖱️</span>
+            <h3>Zero Code</h3>
+            <p>
+              Stop waiting for developers. Use the native Shopify Theme Editor
+              to drag, drop, and customize animations instantly.
+            </p>
+          </div>
+          <div class="feature-card">
+            <span>📱</span>
+            <h3>Mobile Control</h3>
+            <p>
               Hide animations on mobile or adjust sizing specifically for
               smaller screens to ensure a perfect responsive experience.
             </p>
           </div>
 
-          <!-- Zero Code (Wide) -->
-          <div class="feature-card feature-wide feature-horizontal">
-            <div class="feature-icon">
-              <!-- lottie2 -->
-              🖱️
-            </div>
-            <div class="feature-content">
-              <h3 class="feature-title">Zero Code</h3>
-              <p class="feature-text">
-                Stop waiting for developers. Use the native Shopify Theme Editor
-                to drag, drop, and customize animations instantly.
-              </p>
-            </div>
-          </div>
-
-          <!-- Native Integration (Small) -->
-          <div class="feature-card feature-vertical">
-            <div class="feature-icon">
-              <!-- lottie4 -->
-              🎨
-            </div>
-            <h3 class="feature-title">Native Integration</h3>
-            <p class="feature-text">
+          <div class="feature-card feature-large">
+            <span>🎨</span>
+            <h3>Native Integration</h3>
+            <p>
               We don't use messy iframes. Our app integrates directly as a
               Shopify App Block, meaning it works with your existing theme
               settings, borders, and layout logic.
@@ -190,13 +132,79 @@
       </div>
     </section>
 
-    <!-- dotLottie player script (may be at bellow or above in body) -->
+    <!-- Interactive Controls -->
+    <section class="py-5">
+      <div class="container-fluid px-5 controls-layout">
+        <div class="controls-tabs">
+          <button class="tab-btn active" data-tab="playback">
+            Playback Controls
+          </button>
+          <button class="tab-btn" data-tab="mobile">Mobile Settings</button>
+          <button class="tab-btn" data-tab="files">File Management</button>
+        </div>
+
+        <div class="controls-panel" id="tab-content">
+          <pre>
+Playback:
+Loop: ON
+Autoplay: ON
+Hover: Enabled
+Playback Speed: 1.0x
+Reverse: OFF
+</pre
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section id="usecases" class="py-5">
+      <div class="container-fluid px-5">
+        <div class="use-case-row">
+          <div>
+            <span class="use-tag">Product Pages</span>
+            <h2>Showcase Your Product</h2>
+            <p>
+              Replace static images with 360-degree rotations or exploded views.
+              Demonstrate functionality without the bandwidth cost of video.
+            </p>
+          </div>
+          <dotlottie-wc autoplay loop></dotlottie-wc>
+        </div>
+
+        <div class="use-case-row reverse">
+          <dotlottie-wc autoplay loop></dotlottie-wc>
+          <div>
+            <span class="use-tag">Brand Storytelling</span>
+            <h2>Add Brand Personality</h2>
+            <p>
+              Greet visitors with a welcome animation of your logo or mascot.
+              Perfect for the Announcement Bar or Footer to create delight.
+            </p>
+          </div>
+        </div>
+
+        <div class="use-case-row">
+          <div>
+            <span class="use-tag">Seasonal Campaigns</span>
+            <h2>Highlight Promotions</h2>
+            <p>
+              Draw attention to "Add to Cart" buttons or Sale banners with
+              subtle motion that guides the eye without being annoying.
+            </p>
+          </div>
+          <dotlottie-wc autoplay loop></dotlottie-wc>
+        </div>
+      </div>
+    </section>
+
+    <!-- dotLottie Player -->
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
       type="module"
     ></script>
 
-    <!-- custom js -->
+    <!-- Custom JS -->
     <script src="main.js"></script>
   </body>
 </html>
