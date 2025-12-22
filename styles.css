@@ -97,6 +97,75 @@ body {
   border-radius: 999px;
   font-weight: 700;
 }
+/* Split CTA */
+.split-cta-box {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.split-cta-top {
+  background: #ffffff;
+  padding: 40px;
+}
+
+.split-cta-bottom {
+  background: #000000;
+  color: #ffffff;
+  padding: 40px;
+}
+
+/* Pricing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.pricing-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.pricing-card.popular {
+  border: 2px solid #000;
+}
+
+.badge-popular {
+  background: #000;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* FAQ */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-weight: 700;
+}
+
+.faq-answer {
+  display: none;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 768px) {
   .feature-grid,
@@ -105,3 +174,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
