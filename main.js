@@ -28,3 +28,18 @@ tabs.forEach(tab => {
     panel.innerHTML = "<pre>" + tabData[tab.dataset.tab] + "</pre>";
   });
 });
+// FAQ toggle
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+    const answer = q.nextElementSibling;
+    document.querySelectorAll(".faq-answer").forEach(a => {
+      if (a !== answer) a.style.display = "none";
+    });
+    answer.style.display =
+      answer.style.display === "block" ? "none" : "block";
+  });
+});
+
+// Footer year
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
