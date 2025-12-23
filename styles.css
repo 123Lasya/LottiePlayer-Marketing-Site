@@ -5,7 +5,8 @@ body {
   color: #1f2937;
 }
 
-.btn-cta,.btn-1 {
+.btn-cta,
+.btn-1 {
   background: #000;
   color: #fff;
   font-weight: 700;
@@ -13,7 +14,6 @@ body {
 
 .hero h1 {
   font-weight: 800;
-  margin: 16px 0;
 }
 
 .hero-buttons {
@@ -22,38 +22,39 @@ body {
   margin: 20px 0;
 }
 
+/* Feature Grid */
 .feature-grid {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
 .feature-large {
-  grid-column: span 3;
+  grid-column: span 2;
 }
 
 .feature-card {
+  background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 24px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.25s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px #000;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
+/* Controls */
 .controls-layout {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 32px;
-}
-
-.controls-tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .tab-btn {
@@ -76,11 +77,13 @@ body {
   font-family: monospace;
 }
 
+/* Use Cases */
 .use-case-row {
+  max-width: 1200px;
+  margin: 0 auto 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  margin-bottom: 80px;
 }
 
 .use-case-row.reverse {
@@ -97,74 +100,11 @@ body {
   border-radius: 999px;
   font-weight: 700;
 }
-/* Split CTA */
-.split-cta-box {
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.split-cta-top {
-  background: #ffffff;
-  padding: 40px;
-}
-
-.split-cta-bottom {
-  background: #000000;
-  color: #ffffff;
-  padding: 40px;
-}
-
-/* Pricing */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-}
-
-.pricing-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 32px;
-}
-
-.pricing-card.popular {
-  border: 2px solid #000;
-}
-
-.badge-popular {
-  background: #000;
-  color: #fff;
-  padding: 4px 10px;
-  font-size: 12px;
-}
-
-/* FAQ */
-.faq-question {
-  width: 100%;
-  text-align: left;
-  padding: 16px;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  font-weight: 700;
-}
-
-.faq-answer {
-  display: none;
-  padding: 16px;
-  border: 1px solid #e5e7eb;
-  border-top: none;
-}
 
 /* Footer */
 .footer {
   border-top: 1px solid #e5e7eb;
-  font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
+  color: #6b7280;
 }
 
 @media (max-width: 768px) {
@@ -172,6 +112,10 @@ body {
   .controls-layout,
   .use-case-row {
     grid-template-columns: 1fr;
+  }
+
+  .feature-large {
+    grid-column: span 1;
   }
 }
 
