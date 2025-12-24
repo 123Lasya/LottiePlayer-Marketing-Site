@@ -5,6 +5,27 @@ body {
   color: #1f2937;
 }
 
+/* NAVBAR */
+
+.logo-wide {
+  font-size: 26px;
+  font-weight: 800;
+  padding-right: 20px;
+}
+
+.nav-spacing .nav-link {
+  margin: 0 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .logo-wide {
+    font-size: 22px;
+  }
+}
+
+/* BUTTONS */
+
 .btn-cta,
 .btn-1 {
   background: #000;
@@ -12,30 +33,56 @@ body {
   font-weight: 700;
 }
 
+/* HERO */
+.hero{
+  margin:0px 0px 0px 100px
+}
 .hero h1 {
+  margin-top: 16px;
+}
+
+.hero-heading {
+  font-size: 52px;
   font-weight: 800;
+  line-height: 1.15;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #004c3f,
+    #00a991,
+    #3b82f6
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 12px;
-  margin: 20px 0;
+  gap: 14px;
+  margin: 22px 0;
 }
 
-/* Feature Grid */
+.hero p {
+  font-size: 18px;
+  color: #4b5563;
+}
+
 .feature-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 20px;
 }
 
 .feature-large {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
 .feature-card {
+  width:auto;
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 20px;
@@ -45,10 +92,62 @@ body {
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Controls */
+.features-section {
+  background: #f9fafb;
+}
+
+.features-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.features-header p {
+  color: #6b7280;
+  font-size: 16px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.feature-card dotlottie-wc {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+
+
+/* CONTROLS */
+
 .controls-layout {
   max-width: 1200px;
   margin: 0 auto;
@@ -56,28 +155,98 @@ body {
   grid-template-columns: 220px 1fr;
   gap: 32px;
 }
+.controls-tabs{
+  max-width: 1125px;
 
-.tab-btn {
-  padding: 10px;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  font-weight: 700;
-}
-
-.tab-btn.active {
-  background: #000;
-  color: #fff;
 }
 
 .controls-panel {
   background: #000;
   color: #e5e7eb;
   padding: 28px;
+  margin:0px 0px 0px 125px;
   border-radius: 16px;
   font-family: monospace;
 }
 
-/* Use Cases */
+.controls-section {
+  background: #ffffff;
+}
+
+.controls-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.controls-header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Layout already exists, just refinement */
+.controls-layout {
+  align-items: center;
+}
+
+/* Left tab cards */
+.controls-tabs {
+  gap: 14px;
+}
+
+.tab-btn {
+  text-align: left;
+  padding: 10px 16px;
+  margin: 6px 0px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.tab-btn strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.tab-btn span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Active tab style (light green like reference) */
+.tab-btn.active {
+  background: #e8f5ee;
+  border-color: #b7e4c7;
+  color: #065f46;
+}
+
+/* Dark editor panel */
+.controls-panel {
+  background: linear-gradient(145deg, #0b0b0b, #1a1a1a);
+  color: #c7f9cc;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+}
+
+/* Code text */
+.controls-panel pre {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.tab-btn{
+width:300px
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .controls-header h2 {
+    font-size: 28px;
+  }
+}
+/* USE CASES */
+
 .use-case-row {
   max-width: 1200px;
   margin: 0 auto 80px;
@@ -101,13 +270,412 @@ body {
   font-weight: 700;
 }
 
-/* Footer */
+.usecases-section {
+  background: linear-gradient(#ffffff, #f9fafb);
+}
+
+.usecases-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* Layout already exists, refine it */
+.use-case-row {
+  align-items: center;
+}
+
+/* Text block */
+.usecase-text h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.usecase-text p {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+/* Black background for Lottie */
+.black-bg {
+  background: #0b0b0b;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lottie sizing */
+.black-bg dotlottie-wc {
+  width: 220px;
+  height: 220px;
+}
+.userbox{
+  margin:25px 10%;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .usecases-header h2 {
+    font-size: 28px;
+  }
+
+  .usecase-text p {
+    max-width: 100%;
+  }
+}
+/* SPLIT CTA SECTION */
+
+.split-cta-section {
+  background: #ffffff;
+}
+
+/* Main container */
+.split-cta-box {
+  border-radius: 24px;
+  overflow: hidden;
+  /* border: 1px solid #e5e7eb; */
+}
+
+/* TOP HALF */
+
+.split-cta-top {
+  background: #ffffff;
+  padding: 48px;
+}
+
+.split-cta-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.split-cta-text h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.cta-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.cta-list li {
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+  color: #374151;
+}
+
+.cta-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* Illustration */
+.split-cta-visual {
+  min-width: 220px;
+}
+
+.split-cta-visual dotlottie-wc {
+  width: 220px;
+  height: 220px;
+}
+
+/* BOTTOM HALF */
+
+.split-cta-bottom {
+  border-radius: 24px;
+  background: #000000;
+  color: #ffffff;
+  padding: 32px 48px;
+}
+
+.split-cta-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.split-cta-bottom h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.split-cta-bottom p {
+  font-size: 15px;
+  color: #d1d5db;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .split-cta-top-content,
+  .split-cta-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .split-cta-visual {
+    margin-top: 20px;
+  }
+}
+
+
+.pricing-section {
+  background: #ffffff;
+}
+
+.pricing-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* Grid */
+.pricing-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* Cards */
+.pricing-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  position: relative;
+}
+
+/* Popular card highlight */
+.pricing-card.popular {
+  border: 2px solid #16a34a;
+}
+
+/* Badge */
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* Price */
+.price {
+  margin: 20px 0;
+}
+
+.amount {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.duration {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Note */
+.pricing-note {
+  font-size: 14px;
+  color: #16a34a;
+  margin-bottom: 12px;
+}
+
+/* Features */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pricing-features li {
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ SECTION */
+
+.faq-section {
+  background: #ffffff;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* FAQ Item Container */
+.faq-item {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  background: #ffffff;
+  border: none;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Arrow icon */
+.faq-question::after {
+  content: "⌄";
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+.faq-question.active::after {
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.faq-answer {
+  padding: 0 24px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+  display: none;
+}
+
+/* Smooth feel */
+.faq-item:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .faq-question {
+    font-size: 15px;
+  }
+}
+/* PRIVACY POLICY */
+
+.privacy-section {
+  background: #ffffff;
+}
+
+.privacy-section .container {
+  max-width: 900px;
+}
+
+/* Main title */
+.privacy-section h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* Updated date */
+.privacy-section p strong {
+  font-weight: 700;
+}
+
+.privacy-section p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+/* Section headings */
+.privacy-section h4 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Lists */
+.privacy-section ul {
+  padding-left: 18px;
+  margin-bottom: 24px;
+}
+
+.privacy-section li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #374151;
+}
+
+/* Contact email emphasis */
+.privacy-section p:last-child {
+  font-weight: 600;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .privacy-section h3 {
+    font-size: 26px;
+  }
+
+  .privacy-section h4 {
+    font-size: 18px;
+  }
+}
+
+/* FOOTER */
+
 .footer {
   border-top: 1px solid #e5e7eb;
   color: #6b7280;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 768px) {
+  .hero-heading {
+    font-size: 36px;
+  }
+
   .feature-grid,
   .controls-layout,
   .use-case-row {
@@ -117,5 +685,8 @@ body {
   .feature-large {
     grid-column: span 1;
   }
-}
 
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
