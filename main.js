@@ -32,3 +32,20 @@ tabs.forEach(tab => {
 // Footer year
 document.getElementById("currentYear").textContent =
   new Date().getFullYear();
+// FAQ toggle
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+    const answer = q.nextElementSibling;
+
+    document.querySelectorAll(".faq-answer").forEach(a => {
+      if (a !== answer) {
+        a.style.display = "none";
+        a.previousElementSibling.classList.remove("active");
+      }
+    });
+
+    const isOpen = answer.style.display === "block";
+    answer.style.display = isOpen ? "none" : "block";
+    q.classList.toggle("active", !isOpen);
+  });
+});
