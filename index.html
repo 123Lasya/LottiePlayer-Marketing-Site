@@ -26,7 +26,8 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Logo</a>
+        <!-- Logo -->
+        <a class="navbar-brand logo-wide" href="#">Logo</a>
 
         <button
           class="navbar-toggler"
@@ -38,7 +39,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav mx-auto nav-spacing">
             <li class="nav-item">
               <a class="nav-link" href="#features">Features</a>
             </li>
@@ -60,31 +61,37 @@
         <div class="row align-items-center">
           <div class="col-lg-6 hero-text">
             <span class="badge">Compatible with Online Store 2.0</span>
-            <h1>Turn Static Pages into Dynamic Experiences</h1>
+
+            <!-- UPDATED HERO HEADING -->
+            <h1 class="hero-heading">
+              Turn Static Pages into <br />
+              <span class="gradient-text">Dynamic Experiences</span>
+            </h1>
+
             <p>
               The easiest way to add high-performance Lottie animations to your
               Shopify store. Drag-and-drop simplicity with powerful controls.
             </p>
 
             <div class="hero-buttons">
-              <a class="btn btn-dark btn-lg btn-1" href="#"
-                >Start Your Free Trial</a
-              >
-              <a class="btn btn-outline-dark btn-lg" href="#"
-                >See How it Works</a
-              >
+              <a class="btn btn-dark btn-lg btn-1" href="#">
+                Start Your Free Trial
+              </a>
+              <a class="btn btn-outline-dark btn-lg" href="#">
+                See How it Works
+              </a>
             </div>
 
-            <small>
-              <span class="p-5"></span>7-day free trial
-              <span class="p-1"></span>• No coding required</small
-            >
+            <small class="ms-5"
+              ><span class="ms-5">7-day free trial</span
+              ><span class="ms-4">• No coding required </span>
+            </small>
           </div>
 
           <div class="col-lg-6 text-center">
             <dotlottie-wc
               src="https://lottie.host/25486076-8748-47df-a93b-47a7bfe7660a/Ymsodq9dzS.lottie"
-              style="width: 500px; height: 400px"
+              style="width: 600px; height: 400px"
               autoplay
               loop
             ></dotlottie-wc>
@@ -94,13 +101,22 @@
     </section>
 
     <!-- Feature Grid -->
-    <section id="features" class="py-5 border-1">
-      <div class="container-fluid px-5">
+    <section id="features" class="features-section py-5">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="features-header text-center mb-5">
+          <h2>Designed for Merchants,<br />Loved by Developers</h2>
+          <p>
+            Flexible bento grid animations, integrations, and lightweight
+            performance.
+          </p>
+        </div>
+
         <div class="feature-grid">
+          <!-- Performance First -->
           <div class="feature-card feature-large">
             <dotlottie-wc
               src="https://lottie.host/fd1a41f5-55f5-4433-b8e3-743602616da4/UqMEfMs11l.lottie"
-              style="width: 300px; height: 300px"
               autoplay
               loop
             ></dotlottie-wc>
@@ -112,10 +128,10 @@
             </p>
           </div>
 
+          <!-- Zero Code -->
           <div class="feature-card">
             <dotlottie-wc
-              src="https://lottie.host/a893b822-5f85-41cd-ae95-28ec1c02de5a/p7V8jA3750.lottie"
-              style="width: 300px; height: 300px"
+              src="https://lottie.host/dc9fd9cf-c950-43c9-9877-d1c21d19880a/UPivvW8dlF.lottie"
               autoplay
               loop
             ></dotlottie-wc>
@@ -125,10 +141,10 @@
               to drag, drop, and customize animations instantly.
             </p>
           </div>
+          <!-- Mobile Control -->
           <div class="feature-card">
             <dotlottie-wc
               src="https://lottie.host/88e15fb1-eacb-4159-9606-937f523add99/FrxNQv1P3e.lottie"
-              style="width: 300px; height: 300px"
               autoplay
               loop
             ></dotlottie-wc>
@@ -139,10 +155,10 @@
             </p>
           </div>
 
+          <!-- Native Integration -->
           <div class="feature-card feature-large">
             <dotlottie-wc
               src="https://lottie.host/1ec06bf4-de7e-4c0f-8adc-545646a0284a/BYGIKZUO59.lottie"
-              style="width: 300px; height: 300px"
               autoplay
               loop
             ></dotlottie-wc>
@@ -158,18 +174,33 @@
     </section>
 
     <!-- Interactive Controls -->
-    <section class="py-5">
-      <div class="container-fluid px-5 controls-layout">
-        <div class="controls-tabs">
-          <button class="tab-btn active" data-tab="playback">
-            Playback Controls
-          </button>
-          <button class="tab-btn" data-tab="mobile">Mobile Settings</button>
-          <button class="tab-btn" data-tab="files">File Management</button>
+    <section class="controls-section py-5">
+      <div class="container">
+        <!-- Section heading -->
+        <div class="controls-header text-center mb-5">
+          <h2>Total Control in the Theme Editor</h2>
+          <p>Advanced settings that are easy to understand.</p>
         </div>
 
-        <div class="controls-panel" id="tab-content">
-          <pre>
+        <div class="controls-layout">
+          <!-- Left Tabs -->
+          <div class="controls-tabs">
+            <button class="tab-btn active" data-tab="playback">
+              <strong>Playback Controls</strong>
+            </button>
+
+            <button class="tab-btn" data-tab="mobile">
+              <strong>Mobile Settings</strong>
+            </button>
+
+            <button class="tab-btn" data-tab="files">
+              <strong>File Management</strong>
+            </button>
+          </div>
+
+          <!-- Right Panel -->
+          <div class="controls-panel" id="tab-content">
+            <pre>
 Playback:
 Loop: ON
 Autoplay: ON
@@ -177,24 +208,32 @@ Hover: Enabled
 Playback Speed: 1.0x
 Reverse: OFF
 </pre
-          >
+            >
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Use Cases -->
-    <section id="usecases" class="py-5">
-      <div class="container-fluid px-5">
-        <div class="use-case-row">
-          <dotlottie-wc
-            src="https://lottie.host/51df6cd3-7959-42d7-a1e0-abeda879701f/AMhZeX3VN7.lottie"
-            style="width: 300px; height: 300px"
-            autoplay
-            loop
-          ></dotlottie-wc>
-          <div>
-            <span class="use-tag">Product Pages</span>
-            <h2>Showcase Your Product</h2>
+    <section id="usecases" class="usecases-section py-5">
+      <div class="container usercontainer">
+        <!-- Section Heading -->
+        <div class="usecases-header text-center mb-5">
+          <h2>Where to use LottiePlayer</h2>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="use-case-row userbox">
+          <div class="usecase-visual black-bg">
+            <dotlottie-wc
+              src="https://lottie.host/51df6cd3-7959-42d7-a1e0-abeda879701f/AMhZeX3VN7.lottie"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+
+          <div class="usecase-text">
+            <h3>Showcase Your Product</h3>
             <p>
               Replace static images with 360-degree rotations or exploded views.
               Demonstrate functionality without the bandwidth cost of video.
@@ -202,16 +241,18 @@ Reverse: OFF
           </div>
         </div>
 
-        <div class="use-case-row reverse">
-          <dotlottie-wc
-            src="https://lottie.host/58f387b1-54bb-4f4e-a642-c4273c47ba1c/4u2JQ4TGru.lottie"
-            style="width: 300px; height: 300px"
-            autoplay
-            loop
-          ></dotlottie-wc>
-          <div>
-            <span class="use-tag">Brand Storytelling</span>
-            <h2>Add Brand Personality</h2>
+        <!-- Row 2 -->
+        <div class="use-case-row reverse userbox">
+          <div class="usecase-visual black-bg">
+            <dotlottie-wc
+              src="https://lottie.host/58f387b1-54bb-4f4e-a642-c4273c47ba1c/4u2JQ4TGru.lottie"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+
+          <div class="usecase-text">
+            <h3>Add Brand Personality</h3>
             <p>
               Greet visitors with a welcome animation of your logo or mascot.
               Perfect for the Announcement Bar or Footer to create delight.
@@ -219,16 +260,18 @@ Reverse: OFF
           </div>
         </div>
 
-        <div class="use-case-row">
-          <dotlottie-wc
-            src="https://lottie.host/1bb0f4a4-eeef-40d1-a4d9-acf047618316/yYhN9wsPtl.lottie"
-            style="width: 300px; height: 300px"
-            autoplay
-            loop
-          ></dotlottie-wc>
-          <div>
-            <span class="use-tag">Seasonal Campaigns</span>
-            <h2>Highlight Promotions</h2>
+        <!-- Row 3 -->
+        <div class="use-case-row userbox">
+          <div class="usecase-visual black-bg">
+            <dotlottie-wc
+              src="https://lottie.host/1bb0f4a4-eeef-40d1-a4d9-acf047618316/yYhN9wsPtl.lottie"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+
+          <div class="usecase-text">
+            <h3>Highlight Promotions</h3>
             <p>
               Draw attention to "Add to Cart" buttons or Sale banners with
               subtle motion that guides the eye without being annoying.
@@ -237,58 +280,96 @@ Reverse: OFF
         </div>
       </div>
     </section>
+
     <!-- Split CTA Section -->
     <section class="split-cta-section py-5">
       <div class="container">
         <div class="split-cta-box">
           <!-- Top Half -->
           <div class="split-cta-top">
-            <h2>LottiePlayer Was Built for Merchants Who...</h2>
-            <ul>
-              <li>
-                need fast-loading pages that still feel premium and engaging
-              </li>
-              <li>
-                need lightweight solutions that won't tank Core Web Vitals
-                scores
-              </li>
-              <li>want marketers to edit content without touching your code</li>
-              <li>need reliable performance across all devices and browsers</li>
-            </ul>
-            <a href="#" class="btn btn-dark">Subscribe to LottiePlayer Now</a>
+            <div class="split-cta-top-content">
+              <div class="split-cta-text">
+                <h2>LottiePlayer Was Built for Merchants Who...</h2>
+
+                <ul class="cta-list">
+                  <li>
+                    need fast-loading pages that still feel premium and engaging
+                  </li>
+                  <li>
+                    need lightweight solutions that won’t tank Core Web Vitals
+                    scores
+                  </li>
+                  <li>
+                    want marketers to edit content without touching your code
+                  </li>
+                  <li>
+                    need reliable performance across all devices and browsers
+                  </li>
+                </ul>
+
+                <a href="#" class="btn btn-dark">
+                  Subscribe to LottiePlayer Now
+                </a>
+              </div>
+
+              <!-- Illustration / Lottie Placeholder -->
+              <div class="split-cta-visual">
+                <!-- placeholder lottie or image -->
+                <dotlottie-wc
+                  src="https://lottie.host/88960283-1f43-415c-9aff-7739cf08036d/hOJTdzLxrW.lottie"
+                  style="width: 500px; height: 300px"
+                  autoplay
+                  loop
+                ></dotlottie-wc>
+              </div>
+            </div>
           </div>
 
           <!-- Bottom Half -->
           <div class="split-cta-bottom">
-            <h2>Need help with creating a customized Animation?</h2>
-            <p>Let's create an appropriate animation that fits your brand</p>
-            <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2jTXJbS26B-k3W4d9ESpvQ2vbs2aDTlfuvr67NRofAkqfYwSuBzN2BKbmV7TZ_E2JH-ZnUFS24?gv=true"
-              target="_blank"
-              class="btn btn-outline-light"
-            >
-              Schedule a meeting with us
-              <dotlottie-wc
-                src="https://lottie.host/641eefe4-1b1b-4649-b41b-9fc8f5db654c/5QVCXYjoIg.lottie"
-                style="width: 300px; height: 300px"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </a>
+            <div class="split-cta-bottom-content">
+              <div>
+                <h3>Need help with creating a customized Animation?</h3>
+                <p>
+                  Let's create an appropriate animation that fits your brand
+                </p>
+              </div>
+
+              <a
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2jTXJbS26B-k3W4d9ESpvQ2vbs2aDTlfuvr67NRofAkqfYwSuBzN2BKbmV7TZ_E2JH-ZnUFS24?gv=true"
+                target="_blank"
+                class="btn btn-outline-light"
+              >
+                Schedule a meeting with us
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Pricing Section -->
     <section class="pricing-section py-5">
       <div class="container">
+        <!-- Section Heading -->
+        <div class="pricing-header text-center mb-5">
+          <h2>Simple, Transparent Pricing</h2>
+        </div>
+
         <div class="pricing-grid">
-          <!-- Monthly -->
+          <!-- Monthly Card -->
           <div class="pricing-card">
             <h3>Monthly</h3>
-            <p class="price">$9.99 / month</p>
-            <a href="#" class="btn btn-dark">Start 7-Day Free Trial</a>
-            <ul>
+            <p class="price">
+              <span class="amount">$9.99</span>
+              <span class="duration">/month</span>
+            </p>
+
+            <a href="#" class="btn btn-outline-dark w-100 mb-3">
+              Start 7-Day Free Trial
+            </a>
+
+            <ul class="pricing-features">
               <li>Unlimited Animations</li>
               <li>Full Playback Controls</li>
               <li>Mobile Customization</li>
@@ -296,14 +377,23 @@ Reverse: OFF
             </ul>
           </div>
 
-          <!-- Yearly -->
+          <!-- Yearly Card -->
           <div class="pricing-card popular">
-            <span class="badge-popular">MOST POPULAR</span>
+            <span class="popular-badge">MOST POPULAR</span>
+
             <h3>Yearly</h3>
-            <p class="price">$9.90 / year</p>
-            <p class="savings">Save 10% vs Monthly</p>
-            <a href="#" class="btn btn-dark">Start 7-Day Free Trial</a>
-            <ul>
+            <p class="price">
+              <span class="amount">$9.90</span>
+              <span class="duration">/month</span>
+            </p>
+
+            <p class="pricing-note">Save 10% vs Monthly</p>
+
+            <a href="#" class="btn btn-dark w-100 mb-3">
+              Start 7-Day Free Trial
+            </a>
+
+            <ul class="pricing-features">
               <li>All Monthly Features</li>
               <li>Priority Support</li>
             </ul>
@@ -311,6 +401,7 @@ Reverse: OFF
         </div>
       </div>
     </section>
+
     <!-- FAQ Section -->
     <section class="faq-section py-5">
       <div class="container">
@@ -320,58 +411,157 @@ Reverse: OFF
           <button class="faq-question">Do I need to know how to code?</button>
           <div class="faq-answer">
             No, it's very simple. Just follow the instructions on the app's home
-            page after installation.
+            page after installation, upload your files, adjust all settings on
+            the app-customizer page within the app, and then press save.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">How is billing handled?</button>
           <div class="faq-answer">
-            Billing is handled directly through Shopify and appears on your
-            invoice.
+            Billing is handled directly through Shopify. The subscription fee
+            will appear on your regular Shopify invoice.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">Do you take feature requests?</button>
           <div class="faq-answer">
-            Yes! Please email us at contact@b-moat.com.
+            Yes! We are actively developing this app. Please email us at
+            contact@b-moat.com with your ideas.
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">How can I contact support?</button>
           <div class="faq-answer">
-            Email us at contact@b-moat.com. We reply within 24 hours.
+            You can email us directly at contact@b-moat.com. We aim to reply
+            within 24 hours.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is this app actively maintained?</button>
+          <div class="faq-answer">
+            Yes, we ensure compatibility with the latest Shopify themes and API
+            updates.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Will this app slow down my store?
+          </button>
+          <div class="faq-answer">
+            No. We prioritize performance. The player is lightweight and uses
+            lazy loading to ensure it doesn't impact your initial page load
+            speed.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Are there any additional costs?</button>
+          <div class="faq-answer">
+            No hidden fees. You just pay the monthly or yearly subscription for
+            the app.
           </div>
         </div>
       </div>
     </section>
     <!-- Privacy Policy Section -->
+    <!-- Privacy Policy Section -->
     <section id="privacy" class="privacy-section py-5">
       <div class="container">
         <h3>Privacy Policy for LottiePlayer</h3>
-        <p><strong>Last updated:</strong> 15th Dec 2025</p>
+        <p><strong>Last updated on 15th Dec 2025</strong></p>
+
+        <p>
+          This Privacy Policy describes how your personal information is
+          collected, used, and shared when you install or use the LottiePlayer
+          app (the "App") in connection with your Shopify-powered store.
+        </p>
 
         <h4>Personal Information the App Collects</h4>
+        <p>
+          When you install the App, we are able to access certain information
+          from your Shopify account. We collect the following types of personal
+          information from you as a merchant:
+        </p>
         <ul>
-          <li>Shop Domain</li>
-          <li>Shop Name and Email</li>
-          <li>Subscription Status</li>
+          <li>
+            <strong>Shop Domain:</strong> The domain of your Shopify store.
+          </li>
+          <li><strong>Shop name and Email.</strong></li>
+          <li>
+            <strong>Subscription Status:</strong> Your current subscription
+            status for the App.
+          </li>
+        </ul>
+        <p>
+          We collect personal information directly from you (e.g., through your
+          Shopify account when you install the App).
+        </p>
+
+        <h4>How Do We Use Your Personal Information?</h4>
+        <p>We use the personal information we collect from you to:</p>
+        <ul>
+          <li>Provide and operate the App and its services.</li>
+          <li>Communicate with you regarding the App.</li>
+          <li>Manage your subscription to the App.</li>
+          <li>Comply with legal obligations.</li>
         </ul>
 
-        <h4>How We Use Your Information</h4>
-        <ul>
-          <li>Provide and operate the App</li>
-          <li>Communicate with merchants</li>
-          <li>Manage subscriptions</li>
-          <li>Comply with legal obligations</li>
-        </ul>
+        <h4>Sharing Your Personal Information</h4>
+        <p>
+          We do not share your personal information with third parties for
+          marketing or advertising purposes. We may share your Personal
+          Information to comply with applicable laws and regulations, to respond
+          to a subpoena, search warrant, or other lawful request for information
+          we receive, or to otherwise protect our rights.
+        </p>
 
-        <h4>Contact</h4>
-        <p>Email: contact@b-moat.com</p>
+        <h4>Data Minimization</h4>
+        <p>
+          We are committed to the principle of data minimization and collect
+          only the data necessary for the App to function (shop domain,
+          subscription status).
+        </p>
+
+        <h4>Your Rights</h4>
+        <p>
+          If you are a European resident, you have the right to access personal
+          information we hold about you and to ask that your personal
+          information be corrected, updated, or deleted. If you would like to
+          exercise this right, please contact us through the contact information
+          below.
+        </p>
+        <p>
+          We have implemented webhook endpoints for
+          <strong>customers/data_request</strong>,
+          <strong>customers/redact</strong>, and <strong>shop/redact</strong> to
+          facilitate your data subject rights as required by GDPR.
+        </p>
+
+        <h4>Data Retention</h4>
+        <p>
+          When you uninstall the App, we delete all your information from our
+          records.
+        </p>
+
+        <h4>Changes</h4>
+        <p>
+          We may update this privacy policy from time to time in order to
+          reflect, for example, changes to our practices or for other
+          operational, legal, or regulatory reasons.
+        </p>
+
+        <h4>Contact Us</h4>
+        <p>
+          For more information about our privacy practices, if you have
+          questions, or if you would like to make a complaint, please contact us
+          by email at
+          <strong>contact@b-moat.com</strong>.
+        </p>
       </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer py-3">
       <div class="container text-center">
